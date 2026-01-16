@@ -1,7 +1,6 @@
 #pragma execution_character_set("utf-8")
-#pragma once
-#ifndef UDPRECEIVE_H
-#define UDPRECEIVE_H
+#ifndef UDPRECEIVER_H
+#define UDPRECEIVER_H
 //----------------------------------------------------------
 #include <QObject>
 #include <QUdpSocket>
@@ -35,9 +34,9 @@ private slots:
     void        onReadyRead();
 
 private:
-    QUdpSocket* socket;
+    QUdpSocket  *socket;
     quint16     currentPort;
 };
 
-#endif // UDPRECEIVE_H
+#endif // UDPRECEIVER_H
 //----------------------------------------------------------

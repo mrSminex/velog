@@ -30,8 +30,8 @@ private slots:
     void            onErrorOccurred(const QString& error);
     void            onLogMessage(const QString& message);
 private:
-    Ui::MainWindow* ui;
-    UDPSender* udpSender;                          // отправитель
+    Ui::MainWindow  *ui;
+    UDPSender       *udpSender;                          // отправитель
     QString         currentFilePath;                     // текущий открытый файл
 
 private:

@@ -39,11 +39,9 @@ MainWindow::~MainWindow()
     s.setValue("geometry", this->saveGeometry());
     delete ui;
 }
-
 //--------------------------------------------------------------------
 void MainWindow::on_savePBN_clicked()
 {
-
     QString filePath = QFileDialog::getSaveFileName(
         this,
         "Сохранить скрипт",
@@ -52,7 +50,7 @@ void MainWindow::on_savePBN_clicked()
     );
 
     if (filePath.isEmpty()) {
-        appendToLog("Load file is empty");
+        appendToLog("Файл не выбран!    ");
         return;
     }
     // чтобы было нужно расширение

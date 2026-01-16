@@ -16,8 +16,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget* parent = nullptr);
-    ~MainWindow();
+    explicit        MainWindow(QWidget* parent = nullptr);
+                    ~MainWindow();
 
 private slots:
 
@@ -36,13 +36,13 @@ private slots:
     void            onScriptExecuted(bool success, const QString& message);
 
 private:
-    Ui::MainWindow* ui;
-    UDPReceiver* udpReceiver;
-    ScriptEngine* scriptEngine;
-    GraphicsScene* graphicsScene;
-    QString         receivedScript;    // последний полученный скрипт
+    Ui::MainWindow  *ui;
+    UDPReceiver     *udpReceiver;
+    ScriptEngine    *scriptEngine;
+    GraphicsScene   *graphicsScene;
+    QString         receivedScript;                     // последний полученный скрипт
 
-    void            setupGraphicsView();
+    void            setupGraphicsView();                // настройка QGraphicsView
     void            appendToLog(const QString& message);
     void            updateUIState(bool isListening);
 

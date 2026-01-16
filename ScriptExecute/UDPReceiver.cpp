@@ -29,9 +29,10 @@ bool UDPReceiver::startListening(quint16 port)
         emit logMessage("ERROR: " + error);
         return false;
     }
+
     currentPort = port;
-    //emit logMessage(QString("Начато прослушивание порта %1").arg(port));
     emit listeningStarted(port);
+
     return true;
 }
 //----------------------------------------------------------
@@ -64,9 +65,9 @@ void UDPReceiver::onReadyRead()
             quint16 senderPort = datagram.senderPort();
 
             QString logMsg = QString("Получен скрипт от %1:%2 (%3 байт)")
-                .arg(senderAddress)
-                .arg(senderPort)
-                .arg(datagram.data().size());
+                                    .arg(senderAddress)
+                                    .arg(senderPort)
+                                    .arg(datagram.data().size());
 
             emit logMessage(logMsg);
             emit scriptReceived(script);

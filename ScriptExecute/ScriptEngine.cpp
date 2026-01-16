@@ -5,7 +5,6 @@
 //--------------------------------------------------------------------------
 ScriptEngine::ScriptEngine(QObject* parent) : QObject(parent), lastError("")
 {
-
 }
 //--------------------------------------------------------------------------
 bool ScriptEngine::executeScript(const QString& script, GraphicsScene* graphicsScene)
@@ -42,7 +41,6 @@ bool ScriptEngine::executeScript(const QString& script, GraphicsScene* graphicsS
 
     emit scriptExecuted(true, "Скрипт успешно выполнен!");
     return true;
-
 }
 //--------------------------------------------------------------------------
 void ScriptEngine::registerGraphicsAPI(GraphicsScene* graphicsScene)
@@ -62,17 +60,6 @@ void ScriptEngine::registerGraphicsAPI(GraphicsScene* graphicsScene)
     engine.globalObject().setProperty("clearCanvas", graphicsObject.property("clearCanvas"));
 
     //...
-    // print("x =", 10, "y =", 20);     -->  [Script Debug]: x = 10 y = 20
-//    engine.globalObject().setProperty("print",
-//        engine.newFunction([](QScriptContext *context, QScriptEngine *engine) {
-//           QString result;
-//           for (int i = 0; i < context->argumentCount(); ++i) {
-//               if (i > 0) result += " ";
-//               result += context->argument(i).toString();
-//           }
-//           qDebug() << "[Script Debug]:" << result;
-//           return engine->undefinedValue();
-//       }));
 
     emit logMessage("API для рисования зарегистрировано в движке скриптов");
 }

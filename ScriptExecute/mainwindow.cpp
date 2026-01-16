@@ -21,9 +21,6 @@ MainWindow::MainWindow(QWidget* parent)
     setupGraphicsView();  // сразу настроиваем QGraphicsView
     updateUIState(false); // изначальн не слушаем
 
-
-    appendToLog("=== ScriptExecutor запущен ===");
-    appendToLog("Нажмите Start для начала прослушивания UDP порта");
     // 1.  сигналы от UdpReceiver
     connect(udpReceiver, &UDPReceiver::scriptReceived, this, &MainWindow::onScriptReceived);
     connect(udpReceiver, &UDPReceiver::listeningStarted, this, &MainWindow::onListeningStarted);
@@ -33,6 +30,9 @@ MainWindow::MainWindow(QWidget* parent)
     // 2.  сигналы от ScriptEngine
     connect(scriptEngine, &ScriptEngine::scriptExecuted, this, &MainWindow::onScriptExecuted);
     connect(scriptEngine, &ScriptEngine::logMessage, this, &MainWindow::onLogMessage);
+
+    appendToLog("=== ScriptExecutor запущен ===");
+    appendToLog("Нажмите Start для начала прослушивания UDP порта");
 }
 //--------------------------------------------------------------
 MainWindow::~MainWindow()

@@ -21,7 +21,7 @@ signals:
     void        logMessage(const QString& message);
 
 private:
-    QUdpSocket* socket;
+    QUdpSocket  *socket;
 
 };
 
