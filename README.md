@@ -146,3 +146,5 @@ nmake
 
 ## Примеры использования
 
+![](./srcImg/scriptEditor.png)
+![](./srcImg/scriptExecute.png)
