@@ -8,6 +8,7 @@
 *.qmlproject.user
 *.qmlproject.user.*
 .qmake.stash
+*.stash
 # —генерированные файлы Qt
 moc_*.cpp
 moc_*.h
