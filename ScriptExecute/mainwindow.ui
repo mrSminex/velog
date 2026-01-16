@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Consolas</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Listen Port</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="ListenPortLE">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="startPBN">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #5cd85c, stop: 1 #2ecc71);
+    border: 2px solid #27ae60;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 12px 30px;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Тень */
+    box-shadow: 0 4px 6px rgba(46, 204, 113, 0.3);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #52d152, stop: 1 #27ae60);
+    border: 2px solid #219653;
+    box-shadow: 0 6px 8px rgba(46, 204, 113, 0.4);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #27ae60, stop: 1 #229954);
+    padding-top: 13px;
+    padding-bottom: 11px;
+    box-shadow: 0 2px 4px rgba(46, 204, 113, 0.2);
+}
+
+QPushButton:disabled {
+    background: #bdc3c7;
+    border: 2px solid #95a5a6;
+    color: #7f8c8d;
+    box-shadow: none;
+}</string>
+          </property>
+          <property name="text">
+           <string>start</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stopPBN">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #ff6b6b, stop: 1 #e74c3c);
+    border: 2px solid #c0392b;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 12px 30px;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Тень */
+    box-shadow: 0 4px 6px rgba(231, 76, 60, 0.3);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #ff5252, stop: 1 #c0392b);
+    border: 2px solid #a93226;
+    box-shadow: 0 6px 8px rgba(231, 76, 60, 0.4);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #c0392b, stop: 1 #b03a2e);
+    padding-top: 13px;
+    padding-bottom: 11px;
+    box-shadow: 0 2px 4px rgba(231, 76, 60, 0.2);
+}
+
+QPushButton:disabled {
+    background: #bdc3c7;
+    border: 2px solid #95a5a6;
+    color: #7f8c8d;
+    box-shadow: none;
+}</string>
+          </property>
+          <property name="text">
+           <string>stop</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="executeScriptPBN">
+        <property name="styleSheet">
+         <string notr="true">QPushButton {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #ffa726, stop: 1 #f57c00);
+    border: 2px solid #e65100;
+    border-radius: 10px;
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 12px 30px;
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    
+    /* Тень */
+    box-shadow: 0 4px 6px rgba(245, 124, 0, 0.3);
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #ff9800, stop: 1 #ef6c00);
+    border: 2px solid #d84315;
+    box-shadow: 0 6px 8px rgba(245, 124, 0, 0.4);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                              stop: 0 #ef6c00, stop: 1 #e65100);
+    padding-top: 13px;
+    padding-bottom: 11px;
+    box-shadow: 0 2px 4px rgba(245, 124, 0, 0.2);
+}
+
+QPushButton:disabled {
+    background: #bdc3c7;
+    border: 2px solid #95a5a6;
+    color: #7f8c8d;
+    box-shadow: none;
+}</string>
+        </property>
+        <property name="text">
+         <string>Execute</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGraphicsView" name="scriptGV">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="MinimumExpanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QTextEdit" name="logScript">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Consolas</family>
+            <pointsize>7</pointsize>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTextEdit" name="log">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Consolas</family>
+            <pointsize>9</pointsize>
+           </font>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

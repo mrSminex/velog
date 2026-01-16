@@ -1,0 +1,94 @@
+# Qt Creator и IDE файлы
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.user
+*.user.*
+*.qmlproject.user
+*.qmlproject.user.*
+
+# Сгенерированные файлы Qt
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Makefile*
+*build-*
+
+# Файлы Visual Studio
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+*.sln
+*.suo
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.log
+*.svclog
+*.scc
+
+# Директории сборки
+Debug/
+Release/
+x64/
+Win32/
+build/
+bin/
+obj/
+lib/
+
+# Исполняемые файлы
+*.exe
+*.dll
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.manifest
+
+# Qt специфические
+*.qm
+*.qch
+*.qhc
+lrelease
+lupdate
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+*~
+
+# Логи и временные файлы
+*.log
+*.tmp
+*.temp
+*.cache
+
+# Файлы резервных копий
+*.bak
+*.backup
+*~
+
+# Директории инструментов Qt
+qt/
+qt_work.log
+qtvars.xml
+qt.natvis
