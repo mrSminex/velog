@@ -7,7 +7,7 @@
 *.user.*
 *.qmlproject.user
 *.qmlproject.user.*
-
+.qmake.stash
 # Сгенерированные файлы Qt
 moc_*.cpp
 moc_*.h
@@ -19,12 +19,12 @@ Makefile*
 # Файлы Visual Studio
 .vs/
 *.vcxproj.user
-*.vcxproj.filters
-*.sln
+
+
 *.suo
-*.vcxproj
+
 *.vcxproj.user
-*.vcxproj.filters
+
 *.aps
 *.pch
 *.vspscc
